@@ -1,0 +1,48 @@
+This is a sample automatic junction to a domain server:
+
+1) In Specialize Pass
+
+Line 63: Enter FQDN name of domain (for suffix search order DNS)
+Line 68: Enter IP address of DNS server
+Line 70: Enter name of ethernet adapter used
+Line 71: Enter FQDN domain name
+
+You can check Line 72 and 73 for DNS options to make dynamic update
+
+Line 76: Enter FQDN domain name
+
+You can check Line 77
+
+2) In OOBE System Pass
+
+Line 119 & 120 & 121: Enter account name, display name and group name (for local account)
+Line 123 & 124: Enter password and encrypt it or not
+
+Line 130 & 131 & 132: Enter user name for autologin one time
+Line 134 & 135: and password for autologin account
+
+3) Extra file "C:\Windows\Setup\Scripts\AddComputerToDomain.ps1" (at the end of file...)
+
+Line 285: Enter user for domain, it must have authorization for add an computer account for the domain
+If you used and en-US version of DVD, changed administrateur to administrator !
+
+Line 286: Change string password for credential password for account
+
+The line 287 is used to made a credential object for this account
+
+Line 288: Enter the FQDN domain name to add this computer to the domain
+
+
+Warning: this process is not 100% secure, but it's an example for test in laboratory.
+
+You can checked c:\windows\setup\scripts for log and scripts used.
+You can secure erased temporary Unattend.xml file to not displayed criticals passwords.
+
+Enjoy with this and buy a cup of coffee to scheegans.de:
+
+https://schneegans.de/windows/unattend-generator/
+
+Thanks and regards.
+
+
+
